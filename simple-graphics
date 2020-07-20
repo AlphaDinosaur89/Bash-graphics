@@ -1,5 +1,27 @@
 #!/bin/bash
 
+# Add this to use colors example echo ${fgRed8}Hello, World
+# You can use this while drawing too
+# This is foreground
+export fgBlack8="$(tput setaf 0)";
+export fgRed8="$(tput setaf 1)";
+export fgGreen8="$(tput setaf 2)";
+export fgYellow8="$(tput setaf 3)";
+export fgBlue8="$(tput setaf 4)";
+export fgMagenta8="$(tput setaf 5)";
+export fgCyan8="$(tput setaf 6)";
+export fgWhite8="$(tput setaf 7)";
+
+# This is background
+export bgBlack8="$(tput setab 0)";
+export bgRed8="$(tput setab 1)";
+export bgGreen8="$(tput setab 2)";
+export bgYellow8="$(tput setab 3)";
+export bgBlue8="$(tput setab 4)";
+export bgMagenta8="$(tput setab 5)";
+export bgCyan8="$(tput setab 6)";
+export bgWhite8="$(tput setab 7)";
+
 # Reset everything drew to the screen (Not the cursor)
 resetdraw() {
     draw=0
@@ -7,6 +29,103 @@ resetdraw() {
     draw2=0
     draw3=0
     draw4=0
+    draw5=0
+	draw6=0
+	draw7=0
+	draw8=0
+	draw9=0
+	draw10=0
+	draw11=0
+	draw12=0
+	draw13=0
+	draw14=0
+	draw15=0
+	draw16=0
+	draw17=0
+	draw18=0
+	draw19=0
+	draw20=0
+	draw21=0
+	draw22=0
+	draw23=0
+	draw24=0
+	draw25=0
+	draw26=0
+	draw27=0
+	draw28=0
+	draw29=0
+	draw30=0
+	draw31=0
+	draw32=0
+	draw33=0
+	draw34=0
+	draw35=0
+	draw36=0
+	draw37=0
+	draw38=0
+	draw39=0
+	draw40=0
+	draw41=0
+	draw42=0
+	draw43=0
+	draw44=0
+	draw45=0
+	draw46=0
+	draw47=0
+	draw48=0
+	draw49=0
+	draw50=0
+	draw51=0
+	draw52=0
+	draw53=0
+	draw54=0
+	draw55=0
+	draw56=0
+	draw57=0
+	draw58=0
+	draw59=0
+	draw60=0
+	draw61=0
+	draw62=0
+	draw63=0
+	draw64=0
+	draw65=0
+	draw66=0
+	draw67=0
+	draw68=0
+	draw69=0
+	draw70=0
+	draw71=0
+	draw72=0
+	draw73=0
+	draw74=0
+	draw75=0
+	draw76=0
+	draw77=0
+	draw78=0
+	draw79=0
+	draw80=0
+	draw81=0
+	draw82=0
+	draw83=0
+	draw84=0
+	draw85=0
+	draw86=0
+	draw87=0
+	draw88=0
+	draw89=0
+	draw90=0
+	draw91=0
+	draw92=0
+	draw93=0
+	draw94=0
+	draw95=0
+	draw96=0
+	draw97=0
+	draw98=0
+	draw99=0
+	draw100=0
+
     ctr=0
 }
 
@@ -71,6 +190,12 @@ drawat() {
     fi
 }
 
+drawopt() {
+    ctr=$((ctr+1))
+    tput cup $drawy$1 $drawx$1
+    echo -n $chardr
+}
+
 ctr=0
 # Draw an selected character on the cursor
 # You can draw 5 times Syntax: cursor.draw <character>
@@ -86,62 +211,1019 @@ cursor.draw() {
         draw="true"
         ;;
         1)
-        ctr=$((ctr+1))
-        drawy1=$Y
-        drawx1=$X
-        tput cup $drawy1 $drawx1
-        echo -n $chardr
-        draw1="true"
-        ;;
-        2)
-        ctr=$((ctr+1))
-        drawy2=$Y
-        drawx2=$X
-        tput cup $drawy2 $drawx2
-        echo -n $chardr
-        draw2="true"
-        ;;
-        3)
-        ctr=$((ctr+1))
-        drawy3=$Y
-        drawx3=$X
-        tput cup $drawy3 $drawx3
-        echo -n $chardr
-        draw3="true"
-        ;;
-        4)
-        ctr=$((ctr+1))
-        drawy4=$Y
-        drawx4=$X
-        tput cup $drawy4 $drawx4
-        echo -n $chardr
-        draw4="true"
+		drawopt 1
+		draw1="true"
+		drawy1=$Y
+		drawx1=$X
+		;;
+		2)
+		drawopt 2
+		draw2="true"
+		drawy2=$Y
+		drawx2=$X
+		;;
+		3)
+		drawopt 3
+		draw3="true"
+		drawy3=$Y
+		drawx3=$X
+		;;
+		4)
+		drawopt 4
+		draw4="true"
+		drawy4=$Y
+		drawx4=$X
+		;;
+		5)
+		drawopt 5
+		draw5="true"
+		drawy5=$Y
+		drawx5=$X
+		;;
+		6)
+		drawopt 6
+		draw6="true"
+		drawy6=$Y
+		drawx6=$X
+		;;
+		7)
+		drawopt 7
+		draw7="true"
+		drawy7=$Y
+		drawx7=$X
+		;;
+		8)
+		drawopt 8
+		draw8="true"
+		drawy8=$Y
+		drawx8=$X
+		;;
+		9)
+		drawopt 9
+		draw9="true"
+		drawy9=$Y
+		drawx9=$X
+		;;
+		10)
+		drawopt 10
+		draw10="true"
+		drawy10=$Y
+		drawx10=$X
+		;;
+		11)
+		drawopt 11
+		draw11="true"
+		drawy11=$Y
+		drawx11=$X
+		;;
+		12)
+		drawopt 12
+		draw12="true"
+		drawy12=$Y
+		drawx12=$X
+		;;
+		13)
+		drawopt 13
+		draw13="true"
+		drawy13=$Y
+		drawx13=$X
+		;;
+		14)
+		drawopt 14
+		draw14="true"
+		drawy14=$Y
+		drawx14=$X
+		;;
+		15)
+		drawopt 15
+		draw15="true"
+		drawy15=$Y
+		drawx15=$X
+		;;
+		16)
+		drawopt 16
+		draw16="true"
+		drawy16=$Y
+		drawx16=$X
+		;;
+		17)
+		drawopt 17
+		draw17="true"
+		drawy17=$Y
+		drawx17=$X
+		;;
+		18)
+		drawopt 18
+		draw18="true"
+		drawy18=$Y
+		drawx18=$X
+		;;
+		19)
+		drawopt 19
+		draw19="true"
+		drawy19=$Y
+		drawx19=$X
+		;;
+		20)
+		drawopt 20
+		draw20="true"
+		drawy20=$Y
+		drawx20=$X
+		;;
+		21)
+		drawopt 21
+		draw21="true"
+		drawy21=$Y
+		drawx21=$X
+		;;
+		22)
+		drawopt 22
+		draw22="true"
+		drawy22=$Y
+		drawx22=$X
+		;;
+		23)
+		drawopt 23
+		draw23="true"
+		drawy23=$Y
+		drawx23=$X
+		;;
+		24)
+		drawopt 24
+		draw24="true"
+		drawy24=$Y
+		drawx24=$X
+		;;
+		25)
+		drawopt 25
+		draw25="true"
+		drawy25=$Y
+		drawx25=$X
+		;;
+		26)
+		drawopt 26
+		draw26="true"
+		drawy26=$Y
+		drawx26=$X
+		;;
+		27)
+		drawopt 27
+		draw27="true"
+		drawy27=$Y
+		drawx27=$X
+		;;
+		28)
+		drawopt 28
+		draw28="true"
+		drawy28=$Y
+		drawx28=$X
+		;;
+		29)
+		drawopt 29
+		draw29="true"
+		drawy29=$Y
+		drawx29=$X
+		;;
+		30)
+		drawopt 30
+		draw30="true"
+		drawy30=$Y
+		drawx30=$X
+		;;
+		31)
+		drawopt 31
+		draw31="true"
+		drawy31=$Y
+		drawx31=$X
+		;;
+		32)
+		drawopt 32
+		draw32="true"
+		drawy32=$Y
+		drawx32=$X
+		;;
+		33)
+		drawopt 33
+		draw33="true"
+		drawy33=$Y
+		drawx33=$X
+		;;
+		34)
+		drawopt 34
+		draw34="true"
+		drawy34=$Y
+		drawx34=$X
+		;;
+		35)
+		drawopt 35
+		draw35="true"
+		drawy35=$Y
+		drawx35=$X
+		;;
+		36)
+		drawopt 36
+		draw36="true"
+		drawy36=$Y
+		drawx36=$X
+		;;
+		37)
+		drawopt 37
+		draw37="true"
+		drawy37=$Y
+		drawx37=$X
+		;;
+		38)
+		drawopt 38
+		draw38="true"
+		drawy38=$Y
+		drawx38=$X
+		;;
+		39)
+		drawopt 39
+		draw39="true"
+		drawy39=$Y
+		drawx39=$X
+		;;
+		40)
+		drawopt 40
+		draw40="true"
+		drawy40=$Y
+		drawx40=$X
+		;;
+		41)
+		drawopt 41
+		draw41="true"
+		drawy41=$Y
+		drawx41=$X
+		;;
+		42)
+		drawopt 42
+		draw42="true"
+		drawy42=$Y
+		drawx42=$X
+		;;
+		43)
+		drawopt 43
+		draw43="true"
+		drawy43=$Y
+		drawx43=$X
+		;;
+		44)
+		drawopt 44
+		draw44="true"
+		drawy44=$Y
+		drawx44=$X
+		;;
+		45)
+		drawopt 45
+		draw45="true"
+		drawy45=$Y
+		drawx45=$X
+		;;
+		46)
+		drawopt 46
+		draw46="true"
+		drawy46=$Y
+		drawx46=$X
+		;;
+		47)
+		drawopt 47
+		draw47="true"
+		drawy47=$Y
+		drawx47=$X
+		;;
+		48)
+		drawopt 48
+		draw48="true"
+		drawy48=$Y
+		drawx48=$X
+		;;
+		49)
+		drawopt 49
+		draw49="true"
+		drawy49=$Y
+		drawx49=$X
+		;;
+		50)
+		drawopt 50
+		draw50="true"
+		drawy50=$Y
+		drawx50=$X
+		;;
+		51)
+		drawopt 51
+		draw51="true"
+		drawy51=$Y
+		drawx51=$X
+		;;
+		52)
+		drawopt 52
+		draw52="true"
+		drawy52=$Y
+		drawx52=$X
+		;;
+		53)
+		drawopt 53
+		draw53="true"
+		drawy53=$Y
+		drawx53=$X
+		;;
+		54)
+		drawopt 54
+		draw54="true"
+		drawy54=$Y
+		drawx54=$X
+		;;
+		55)
+		drawopt 55
+		draw55="true"
+		drawy55=$Y
+		drawx55=$X
+		;;
+		56)
+		drawopt 56
+		draw56="true"
+		drawy56=$Y
+		drawx56=$X
+		;;
+		57)
+		drawopt 57
+		draw57="true"
+		drawy57=$Y
+		drawx57=$X
+		;;
+		58)
+		drawopt 58
+		draw58="true"
+		drawy58=$Y
+		drawx58=$X
+		;;
+		59)
+		drawopt 59
+		draw59="true"
+		drawy59=$Y
+		drawx59=$X
+		;;
+		60)
+		drawopt 60
+		draw60="true"
+		drawy60=$Y
+		drawx60=$X
+		;;
+		61)
+		drawopt 61
+		draw61="true"
+		drawy61=$Y
+		drawx61=$X
+		;;
+		62)
+		drawopt 62
+		draw62="true"
+		drawy62=$Y
+		drawx62=$X
+		;;
+		63)
+		drawopt 63
+		draw63="true"
+		drawy63=$Y
+		drawx63=$X
+		;;
+		64)
+		drawopt 64
+		draw64="true"
+		drawy64=$Y
+		drawx64=$X
+		;;
+		65)
+		drawopt 65
+		draw65="true"
+		drawy65=$Y
+		drawx65=$X
+		;;
+		66)
+		drawopt 66
+		draw66="true"
+		drawy66=$Y
+		drawx66=$X
+		;;
+		67)
+		drawopt 67
+		draw67="true"
+		drawy67=$Y
+		drawx67=$X
+		;;
+		68)
+		drawopt 68
+		draw68="true"
+		drawy68=$Y
+		drawx68=$X
+		;;
+		69)
+		drawopt 69
+		draw69="true"
+		drawy69=$Y
+		drawx69=$X
+		;;
+		70)
+		drawopt 70
+		draw70="true"
+		drawy70=$Y
+		drawx70=$X
+		;;
+		71)
+		drawopt 71
+		draw71="true"
+		drawy71=$Y
+		drawx71=$X
+		;;
+		72)
+		drawopt 72
+		draw72="true"
+		drawy72=$Y
+		drawx72=$X
+		;;
+		73)
+		drawopt 73
+		draw73="true"
+		drawy73=$Y
+		drawx73=$X
+		;;
+		74)
+		drawopt 74
+		draw74="true"
+		drawy74=$Y
+		drawx74=$X
+		;;
+		75)
+		drawopt 75
+		draw75="true"
+		drawy75=$Y
+		drawx75=$X
+		;;
+		76)
+		drawopt 76
+		draw76="true"
+		drawy76=$Y
+		drawx76=$X
+		;;
+		77)
+		drawopt 77
+		draw77="true"
+		drawy77=$Y
+		drawx77=$X
+		;;
+		78)
+		drawopt 78
+		draw78="true"
+		drawy78=$Y
+		drawx78=$X
+		;;
+		79)
+		drawopt 79
+		draw79="true"
+		drawy79=$Y
+		drawx79=$X
+		;;
+		80)
+		drawopt 80
+		draw80="true"
+		drawy80=$Y
+		drawx80=$X
+		;;
+		81)
+		drawopt 81
+		draw81="true"
+		drawy81=$Y
+		drawx81=$X
+		;;
+		82)
+		drawopt 82
+		draw82="true"
+		drawy82=$Y
+		drawx82=$X
+		;;
+		83)
+		drawopt 83
+		draw83="true"
+		drawy83=$Y
+		drawx83=$X
+		;;
+		84)
+		drawopt 84
+		draw84="true"
+		drawy84=$Y
+		drawx84=$X
+		;;
+		85)
+		drawopt 85
+		draw85="true"
+		drawy85=$Y
+		drawx85=$X
+		;;
+		86)
+		drawopt 86
+		draw86="true"
+		drawy86=$Y
+		drawx86=$X
+		;;
+		87)
+		drawopt 87
+		draw87="true"
+		drawy87=$Y
+		drawx87=$X
+		;;
+		88)
+		drawopt 88
+		draw88="true"
+		drawy88=$Y
+		drawx88=$X
+		;;
+		89)
+		drawopt 89
+		draw89="true"
+		drawy89=$Y
+		drawx89=$X
+		;;
+		90)
+		drawopt 90
+		draw90="true"
+		drawy90=$Y
+		drawx90=$X
+		;;
+		91)
+		drawopt 91
+		draw91="true"
+		drawy91=$Y
+		drawx91=$X
+		;;
+		92)
+		drawopt 92
+		draw92="true"
+		drawy92=$Y
+		drawx92=$X
+		;;
+		93)
+		drawopt 93
+		draw93="true"
+		drawy93=$Y
+		drawx93=$X
+		;;
+		94)
+		drawopt 94
+		draw94="true"
+		drawy94=$Y
+		drawx94=$X
+		;;
+		95)
+		drawopt 95
+		draw95="true"
+		drawy95=$Y
+		drawx95=$X
+		;;
+		96)
+		drawopt 96
+		draw96="true"
+		drawy96=$Y
+		drawx96=$X
+		;;
+		97)
+		drawopt 97
+		draw97="true"
+		drawy97=$Y
+		drawx97=$X
+		;;
+		98)
+		drawopt 98
+		draw98="true"
+		drawy98=$Y
+		drawx98=$X
+		;;
+		99)
+		drawopt 99
+		draw99="true"
+		drawy99=$Y
+		drawx99=$X
+		;;
+		100)
+		drawopt 100
+		draw100="true"
+		drawy100=$Y
+		drawx100=$X
+		;;
+
+
+        101)
         resetdraw
         ;;
     esac
 }
 
-#Use this function if you want to stay with the screen drew
+#Use this function if you want to stay with what the screen drew
 redraw() {
     if [[ $draw == true ]]; then
         tput cup $drawy $drawx
         echo -n $chardr
     fi
     if [[ $draw1 == true ]]; then
-        tput cup $drawy1 $drawx1
-        echo -n $chardr
-    fi
-    if [[ $draw2 == true ]]; then
-        tput cup $drawy2 $drawx2
-        echo -n $chardr
-    fi
-    if [[ $draw3 == true ]]; then
-        tput cup $drawy3 $drawx3
-        echo -n $chardr
-    fi
-    if [[ $draw4 == true ]]; then
-        tput cup $drawy4 $drawx4
-        echo -n $chardr
-    fi
-    
+		tput cup $drawy1 $drawx1
+		echo -n $chardr
+	fi
+	if [[ $draw2 == true ]]; then
+		tput cup $drawy2 $drawx2
+		echo -n $chardr
+	fi
+	if [[ $draw3 == true ]]; then
+		tput cup $drawy3 $drawx3
+		echo -n $chardr
+	fi
+	if [[ $draw4 == true ]]; then
+		tput cup $drawy4 $drawx4
+		echo -n $chardr
+	fi
+	if [[ $draw5 == true ]]; then
+		tput cup $drawy5 $drawx5
+		echo -n $chardr
+	fi
+	if [[ $draw6 == true ]]; then
+		tput cup $drawy6 $drawx6
+		echo -n $chardr
+	fi
+	if [[ $draw7 == true ]]; then
+		tput cup $drawy7 $drawx7
+		echo -n $chardr
+	fi
+	if [[ $draw8 == true ]]; then
+		tput cup $drawy8 $drawx8
+		echo -n $chardr
+	fi
+	if [[ $draw9 == true ]]; then
+		tput cup $drawy9 $drawx9
+		echo -n $chardr
+	fi
+	if [[ $draw10 == true ]]; then
+		tput cup $drawy10 $drawx10
+		echo -n $chardr
+	fi
+	if [[ $draw11 == true ]]; then
+		tput cup $drawy11 $drawx11
+		echo -n $chardr
+	fi
+	if [[ $draw12 == true ]]; then
+		tput cup $drawy12 $drawx12
+		echo -n $chardr
+	fi
+	if [[ $draw13 == true ]]; then
+		tput cup $drawy13 $drawx13
+		echo -n $chardr
+	fi
+	if [[ $draw14 == true ]]; then
+		tput cup $drawy14 $drawx14
+		echo -n $chardr
+	fi
+	if [[ $draw15 == true ]]; then
+		tput cup $drawy15 $drawx15
+		echo -n $chardr
+	fi
+	if [[ $draw16 == true ]]; then
+		tput cup $drawy16 $drawx16
+		echo -n $chardr
+	fi
+	if [[ $draw17 == true ]]; then
+		tput cup $drawy17 $drawx17
+		echo -n $chardr
+	fi
+	if [[ $draw18 == true ]]; then
+		tput cup $drawy18 $drawx18
+		echo -n $chardr
+	fi
+	if [[ $draw19 == true ]]; then
+		tput cup $drawy19 $drawx19
+		echo -n $chardr
+	fi
+	if [[ $draw20 == true ]]; then
+		tput cup $drawy20 $drawx20
+		echo -n $chardr
+	fi
+	if [[ $draw21 == true ]]; then
+		tput cup $drawy21 $drawx21
+		echo -n $chardr
+	fi
+	if [[ $draw22 == true ]]; then
+		tput cup $drawy22 $drawx22
+		echo -n $chardr
+	fi
+	if [[ $draw23 == true ]]; then
+		tput cup $drawy23 $drawx23
+		echo -n $chardr
+	fi
+	if [[ $draw24 == true ]]; then
+		tput cup $drawy24 $drawx24
+		echo -n $chardr
+	fi
+	if [[ $draw25 == true ]]; then
+		tput cup $drawy25 $drawx25
+		echo -n $chardr
+	fi
+	if [[ $draw26 == true ]]; then
+		tput cup $drawy26 $drawx26
+		echo -n $chardr
+	fi
+	if [[ $draw27 == true ]]; then
+		tput cup $drawy27 $drawx27
+		echo -n $chardr
+	fi
+	if [[ $draw28 == true ]]; then
+		tput cup $drawy28 $drawx28
+		echo -n $chardr
+	fi
+	if [[ $draw29 == true ]]; then
+		tput cup $drawy29 $drawx29
+		echo -n $chardr
+	fi
+	if [[ $draw30 == true ]]; then
+		tput cup $drawy30 $drawx30
+		echo -n $chardr
+	fi
+	if [[ $draw31 == true ]]; then
+		tput cup $drawy31 $drawx31
+		echo -n $chardr
+	fi
+	if [[ $draw32 == true ]]; then
+		tput cup $drawy32 $drawx32
+		echo -n $chardr
+	fi
+	if [[ $draw33 == true ]]; then
+		tput cup $drawy33 $drawx33
+		echo -n $chardr
+	fi
+	if [[ $draw34 == true ]]; then
+		tput cup $drawy34 $drawx34
+		echo -n $chardr
+	fi
+	if [[ $draw35 == true ]]; then
+		tput cup $drawy35 $drawx35
+		echo -n $chardr
+	fi
+	if [[ $draw36 == true ]]; then
+		tput cup $drawy36 $drawx36
+		echo -n $chardr
+	fi
+	if [[ $draw37 == true ]]; then
+		tput cup $drawy37 $drawx37
+		echo -n $chardr
+	fi
+	if [[ $draw38 == true ]]; then
+		tput cup $drawy38 $drawx38
+		echo -n $chardr
+	fi
+	if [[ $draw39 == true ]]; then
+		tput cup $drawy39 $drawx39
+		echo -n $chardr
+	fi
+	if [[ $draw40 == true ]]; then
+		tput cup $drawy40 $drawx40
+		echo -n $chardr
+	fi
+	if [[ $draw41 == true ]]; then
+		tput cup $drawy41 $drawx41
+		echo -n $chardr
+	fi
+	if [[ $draw42 == true ]]; then
+		tput cup $drawy42 $drawx42
+		echo -n $chardr
+	fi
+	if [[ $draw43 == true ]]; then
+		tput cup $drawy43 $drawx43
+		echo -n $chardr
+	fi
+	if [[ $draw44 == true ]]; then
+		tput cup $drawy44 $drawx44
+		echo -n $chardr
+	fi
+	if [[ $draw45 == true ]]; then
+		tput cup $drawy45 $drawx45
+		echo -n $chardr
+	fi
+	if [[ $draw46 == true ]]; then
+		tput cup $drawy46 $drawx46
+		echo -n $chardr
+	fi
+	if [[ $draw47 == true ]]; then
+		tput cup $drawy47 $drawx47
+		echo -n $chardr
+	fi
+	if [[ $draw48 == true ]]; then
+		tput cup $drawy48 $drawx48
+		echo -n $chardr
+	fi
+	if [[ $draw49 == true ]]; then
+		tput cup $drawy49 $drawx49
+		echo -n $chardr
+	fi
+	if [[ $draw50 == true ]]; then
+		tput cup $drawy50 $drawx50
+		echo -n $chardr
+	fi
+	if [[ $draw51 == true ]]; then
+		tput cup $drawy51 $drawx51
+		echo -n $chardr
+	fi
+	if [[ $draw52 == true ]]; then
+		tput cup $drawy52 $drawx52
+		echo -n $chardr
+	fi
+	if [[ $draw53 == true ]]; then
+		tput cup $drawy53 $drawx53
+		echo -n $chardr
+	fi
+	if [[ $draw54 == true ]]; then
+		tput cup $drawy54 $drawx54
+		echo -n $chardr
+	fi
+	if [[ $draw55 == true ]]; then
+		tput cup $drawy55 $drawx55
+		echo -n $chardr
+	fi
+	if [[ $draw56 == true ]]; then
+		tput cup $drawy56 $drawx56
+		echo -n $chardr
+	fi
+	if [[ $draw57 == true ]]; then
+		tput cup $drawy57 $drawx57
+		echo -n $chardr
+	fi
+	if [[ $draw58 == true ]]; then
+		tput cup $drawy58 $drawx58
+		echo -n $chardr
+	fi
+	if [[ $draw59 == true ]]; then
+		tput cup $drawy59 $drawx59
+		echo -n $chardr
+	fi
+	if [[ $draw60 == true ]]; then
+		tput cup $drawy60 $drawx60
+		echo -n $chardr
+	fi
+	if [[ $draw61 == true ]]; then
+		tput cup $drawy61 $drawx61
+		echo -n $chardr
+	fi
+	if [[ $draw62 == true ]]; then
+		tput cup $drawy62 $drawx62
+		echo -n $chardr
+	fi
+	if [[ $draw63 == true ]]; then
+		tput cup $drawy63 $drawx63
+		echo -n $chardr
+	fi
+	if [[ $draw64 == true ]]; then
+		tput cup $drawy64 $drawx64
+		echo -n $chardr
+	fi
+	if [[ $draw65 == true ]]; then
+		tput cup $drawy65 $drawx65
+		echo -n $chardr
+	fi
+	if [[ $draw66 == true ]]; then
+		tput cup $drawy66 $drawx66
+		echo -n $chardr
+	fi
+	if [[ $draw67 == true ]]; then
+		tput cup $drawy67 $drawx67
+		echo -n $chardr
+	fi
+	if [[ $draw68 == true ]]; then
+		tput cup $drawy68 $drawx68
+		echo -n $chardr
+	fi
+	if [[ $draw69 == true ]]; then
+		tput cup $drawy69 $drawx69
+		echo -n $chardr
+	fi
+	if [[ $draw70 == true ]]; then
+		tput cup $drawy70 $drawx70
+		echo -n $chardr
+	fi
+	if [[ $draw71 == true ]]; then
+		tput cup $drawy71 $drawx71
+		echo -n $chardr
+	fi
+	if [[ $draw72 == true ]]; then
+		tput cup $drawy72 $drawx72
+		echo -n $chardr
+	fi
+	if [[ $draw73 == true ]]; then
+		tput cup $drawy73 $drawx73
+		echo -n $chardr
+	fi
+	if [[ $draw74 == true ]]; then
+		tput cup $drawy74 $drawx74
+		echo -n $chardr
+	fi
+	if [[ $draw75 == true ]]; then
+		tput cup $drawy75 $drawx75
+		echo -n $chardr
+	fi
+	if [[ $draw76 == true ]]; then
+		tput cup $drawy76 $drawx76
+		echo -n $chardr
+	fi
+	if [[ $draw77 == true ]]; then
+		tput cup $drawy77 $drawx77
+		echo -n $chardr
+	fi
+	if [[ $draw78 == true ]]; then
+		tput cup $drawy78 $drawx78
+		echo -n $chardr
+	fi
+	if [[ $draw79 == true ]]; then
+		tput cup $drawy79 $drawx79
+		echo -n $chardr
+	fi
+	if [[ $draw80 == true ]]; then
+		tput cup $drawy80 $drawx80
+		echo -n $chardr
+	fi
+	if [[ $draw81 == true ]]; then
+		tput cup $drawy81 $drawx81
+		echo -n $chardr
+	fi
+	if [[ $draw82 == true ]]; then
+		tput cup $drawy82 $drawx82
+		echo -n $chardr
+	fi
+	if [[ $draw83 == true ]]; then
+		tput cup $drawy83 $drawx83
+		echo -n $chardr
+	fi
+	if [[ $draw84 == true ]]; then
+		tput cup $drawy84 $drawx84
+		echo -n $chardr
+	fi
+	if [[ $draw85 == true ]]; then
+		tput cup $drawy85 $drawx85
+		echo -n $chardr
+	fi
+	if [[ $draw86 == true ]]; then
+		tput cup $drawy86 $drawx86
+		echo -n $chardr
+	fi
+	if [[ $draw87 == true ]]; then
+		tput cup $drawy87 $drawx87
+		echo -n $chardr
+	fi
+	if [[ $draw88 == true ]]; then
+		tput cup $drawy88 $drawx88
+		echo -n $chardr
+	fi
+	if [[ $draw89 == true ]]; then
+		tput cup $drawy89 $drawx89
+		echo -n $chardr
+	fi
+	if [[ $draw90 == true ]]; then
+		tput cup $drawy90 $drawx90
+		echo -n $chardr
+	fi
+	if [[ $draw91 == true ]]; then
+		tput cup $drawy91 $drawx91
+		echo -n $chardr
+	fi
+	if [[ $draw92 == true ]]; then
+		tput cup $drawy92 $drawx92
+		echo -n $chardr
+	fi
+	if [[ $draw93 == true ]]; then
+		tput cup $drawy93 $drawx93
+		echo -n $chardr
+	fi
+	if [[ $draw94 == true ]]; then
+		tput cup $drawy94 $drawx94
+		echo -n $chardr
+	fi
+	if [[ $draw95 == true ]]; then
+		tput cup $drawy95 $drawx95
+		echo -n $chardr
+	fi
+	if [[ $draw96 == true ]]; then
+		tput cup $drawy96 $drawx96
+		echo -n $chardr
+	fi
+	if [[ $draw97 == true ]]; then
+		tput cup $drawy97 $drawx97
+		echo -n $chardr
+	fi
+	if [[ $draw98 == true ]]; then
+		tput cup $drawy98 $drawx98
+		echo -n $chardr
+	fi
+	if [[ $draw99 == true ]]; then
+		tput cup $drawy99 $drawx99
+		echo -n $chardr
+	fi
+	if [[ $draw100 == true ]]; then
+		tput cup $drawy100 $drawx100
+		echo -n $chardr
+	fi
+
 }
+
