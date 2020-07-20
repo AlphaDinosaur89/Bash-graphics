@@ -16,21 +16,25 @@ while true; do
     # This detects which keys you pressed
     read -rsn 1 out
         if [[ $out == w ]]; then
+            detectBorderCollision
             clear
             redraw
             cursor up ${bgBlack8}+
         fi
         if [[ $out == s ]]; then
+            detectBorderCollision
             clear
             redraw
             cursor down ${bgBlack8}+
         fi
         if [[ $out == d ]]; then
+            detectBorderCollision
             clear
             redraw
             cursor right ${bgBlack8}+
         fi
         if [[ $out == a ]]; then
+            detectBorderCollision
             clear
             redraw
             cursor left ${bgBlack8}+
@@ -42,3 +46,4 @@ while true; do
             resetdraw
         fi
 done
+

@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# Add this to use colors example echo ${fgRed8}Hello, World
+maxX=`tput cols`
+maxY=`tput lines`
+
+# Add this to use colors example echo "${fgRed8}Hello, World"
 # You can use this while drawing too
 # This is foreground
 export fgBlack8="$(tput setaf 0)";
@@ -21,6 +24,22 @@ export bgBlue8="$(tput setab 4)";
 export bgMagenta8="$(tput setab 5)";
 export bgCyan8="$(tput setab 6)";
 export bgWhite8="$(tput setab 7)";
+
+# This checks if the cursor position is on the border
+detectBorderCollision() {
+    if [[ $Y == 0 ]]; then
+        Y=$((Y+1))
+    fi
+    if [[ $X == 0 ]]; then
+        X=$((X+1))
+    fi
+    if [[ $X == $maxX ]]; then
+        X=$((X-1))
+    fi
+    if [[ $Y == $maxY ]]; then
+        Y=$((Y-1))
+    fi
+}
 
 # Reset everything drew to the screen (Not the cursor)
 resetdraw() {
@@ -135,7 +154,6 @@ resetdraw() {
 init() {
     ctrc() {
         tput cnorm
-        sleep 1
         exit 0
     }
     trap ctrc INT
