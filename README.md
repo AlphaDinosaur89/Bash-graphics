@@ -2,8 +2,7 @@
 This is really simple I do not recomend using this
 
 # How to use
-To Install use this commands
-with this command                   
+To Install use this commands                                         
 $ chmod 755 install.sh               
 $ ./install.sh
 
