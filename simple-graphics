@@ -25,6 +25,13 @@ init() {
     tput civis
 }
 
+# Use this if the program stops itself on a area
+# So the cursor gets visible Syntax: exit.program <state>
+exit.program() {
+    tput cnorm
+    exit $1
+}
+
 # Makes the cursor be an selected character Syntax: cursor <move> <character>
 cursor() {
     case $1 in
@@ -49,6 +56,19 @@ cursor() {
         echo -n $2
         ;;
     esac
+}
+
+# Draw at a location Syntax: drawat <y> <x> <character>
+drawat() {
+    local Ypos=$1
+    local Xpos=$2
+    tput cup $Ypos $Xpos
+    echo -n $3
+    if [[ $Y == "" && $X == "" ]]; then
+        :
+    else
+        tput cup $Y $X
+    fi
 }
 
 ctr=0
