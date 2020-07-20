@@ -1,0 +1,45 @@
+#!/bin/bash
+
+printf "Simple paint demo\nYou can only paint 5 'pixels'\n\n"
+printf "Control with wasd keys draw with k key and\nuse the o key to reset"
+echo "Press any key to continue. . ."
+
+read -rsn 1
+
+source simple-graphics
+
+init
+
+# Read the lib source code to see commented info
+clear
+while true; do
+    # This detects which keys you pressed
+    read -rsn 1 out
+        if [[ $out == w ]]; then
+            clear
+            redraw
+            cursor up +
+        fi
+        if [[ $out == s ]]; then
+            clear
+            redraw
+            cursor down +
+        fi
+        if [[ $out == d ]]; then
+            clear
+            redraw
+            cursor right +
+        fi
+        if [[ $out == a ]]; then
+            clear
+            redraw
+            cursor left +
+        fi
+        if [[ $out == k ]]; then
+            cursor.draw o
+        fi
+        if [[ $out == o ]]; then
+            resetdraw
+        fi
+done
+

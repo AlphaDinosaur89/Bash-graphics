@@ -1,0 +1,127 @@
+#!/bin/bash
+
+# Reset everything drew to the screen (Not the cursor)
+resetdraw() {
+    draw=0
+    draw1=0
+    draw2=0
+    draw3=0
+    draw4=0
+    ctr=0
+}
+
+# Makes the cursor invisible,
+# Makes when you press ctrl+C it will make the cursor visible again
+# And reset the x and y
+init() {
+    ctrc() {
+        tput cnorm
+        sleep 1
+        exit 0
+    }
+    trap ctrc INT
+    X=0
+    Y=0
+    tput civis
+}
+
+# Makes the cursor be an selected character Syntax: cursor <move> <character>
+cursor() {
+    case $1 in
+        down)
+        Y=$((Y+1))
+        tput cup $Y $X
+        echo -n $2
+        ;;
+        right)
+        X=$((X+1))
+        tput cup $Y $X
+        echo -n $2
+        ;;
+        left)
+        X=$((X-1))
+        tput cup $Y $X
+        echo -n $2
+        ;;
+        up)
+        Y=$((Y-1))
+        tput cup $Y $X
+        echo -n $2
+        ;;
+    esac
+}
+
+ctr=0
+# Draw an selected character on the cursor
+# You can draw 5 times Syntax: cursor.draw <character>
+cursor.draw() {
+    chardr="$1"
+    case $ctr in
+        0)
+        ctr=$((ctr+1))
+        drawy=$Y
+        drawx=$X
+        tput cup $drawy $drawx
+        echo -n $chardr
+        draw="true"
+        ;;
+        1)
+        ctr=$((ctr+1))
+        drawy1=$Y
+        drawx1=$X
+        tput cup $drawy1 $drawx1
+        echo -n $chardr
+        draw1="true"
+        ;;
+        2)
+        ctr=$((ctr+1))
+        drawy2=$Y
+        drawx2=$X
+        tput cup $drawy2 $drawx2
+        echo -n $chardr
+        draw2="true"
+        ;;
+        3)
+        ctr=$((ctr+1))
+        drawy3=$Y
+        drawx3=$X
+        tput cup $drawy3 $drawx3
+        echo -n $chardr
+        draw3="true"
+        ;;
+        4)
+        ctr=$((ctr+1))
+        drawy4=$Y
+        drawx4=$X
+        tput cup $drawy4 $drawx4
+        echo -n $chardr
+        draw4="true"
+        resetdraw
+        ;;
+    esac
+}
+
+#Use this function if you want to stay with the screen drew
+redraw() {
+    if [[ $draw == true ]]; then
+        tput cup $drawy $drawx
+        echo -n $chardr
+    fi
+    if [[ $draw1 == true ]]; then
+        tput cup $drawy1 $drawx1
+        echo -n $chardr
+    fi
+    if [[ $draw2 == true ]]; then
+        tput cup $drawy2 $drawx2
+        echo -n $chardr
+    fi
+    if [[ $draw3 == true ]]; then
+        tput cup $drawy3 $drawx3
+        echo -n $chardr
+    fi
+    if [[ $draw4 == true ]]; then
+        tput cup $drawy4 $drawx4
+        echo -n $chardr
+    fi
+    
+}
