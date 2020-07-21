@@ -41,6 +41,37 @@ detectBorderCollision() {
     fi
 }
 
+# Draws a rectangle at the specified coordinates 
+# Syntax: draw.rect <collums> <lines> <y> <x> <char>
+# This can create squares too
+# Not mine
+draw.rect() {
+    col=$1
+    lin=$2
+    y=$3
+    x=$4
+    for((i = 1; i <= $col; i++))
+    do
+        tput cup $y $x
+        y=$((y+1))
+    if [ $i -eq 1 -o $i -eq $col ]; then
+    for((j = 1; j <= $lin; j++))
+    do
+        echo -n "$5"
+    done
+    
+    else
+        echo -n "$5"
+        for((j = 2; j < $lin; j++))
+        do
+        echo -n " "
+        done
+        echo -n "$5"
+    fi
+    echo
+    done
+}
+
 # Reset everything drew to the screen (Not the cursor)
 resetdraw() {
     draw=0
