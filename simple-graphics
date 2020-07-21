@@ -184,6 +184,7 @@ resetdraw() {
 # And reset the x and y
 init() {
     ctrc() {
+        clear
         tput cnorm
         exit 0
     }
@@ -859,12 +860,320 @@ cursor.draw() {
 		drawy100=$Y
 		drawx100=$X
 		;;
-
-
         101)
         resetdraw
         ;;
     esac
+}
+
+# Erases what the cursor drew
+# But there is a con that you get less 'pixels' to use
+# Only works with cursor drew stuff
+erase() {
+    if [[ $X == $drawx ]] && [[ $Y == $drawy ]]; then
+        draw=0
+    fi
+    if [[ $X == $drawx1 ]] && [[ $Y == $drawy1 ]]; then
+        draw1=0
+    fi
+    if [[ $X == $drawx2 ]] && [[ $Y == $drawy2 ]]; then
+		draw2=0
+	fi
+	if [[ $X == $drawx3 ]] && [[ $Y == $drawy3 ]]; then
+		draw3=0
+	fi
+	if [[ $X == $drawx4 ]] && [[ $Y == $drawy4 ]]; then
+		draw4=0
+	fi
+	if [[ $X == $drawx5 ]] && [[ $Y == $drawy5 ]]; then
+		draw5=0
+	fi
+	if [[ $X == $drawx6 ]] && [[ $Y == $drawy6 ]]; then
+		draw6=0
+	fi
+	if [[ $X == $drawx7 ]] && [[ $Y == $drawy7 ]]; then
+		draw7=0
+	fi
+	if [[ $X == $drawx8 ]] && [[ $Y == $drawy8 ]]; then
+		draw8=0
+	fi
+	if [[ $X == $drawx9 ]] && [[ $Y == $drawy9 ]]; then
+		draw9=0
+	fi
+	if [[ $X == $drawx10 ]] && [[ $Y == $drawy10 ]]; then
+		draw10=0
+	fi
+	if [[ $X == $drawx11 ]] && [[ $Y == $drawy11 ]]; then
+		draw11=0
+	fi
+	if [[ $X == $drawx12 ]] && [[ $Y == $drawy12 ]]; then
+		draw12=0
+	fi
+	if [[ $X == $drawx13 ]] && [[ $Y == $drawy13 ]]; then
+		draw13=0
+	fi
+	if [[ $X == $drawx14 ]] && [[ $Y == $drawy14 ]]; then
+		draw14=0
+	fi
+	if [[ $X == $drawx15 ]] && [[ $Y == $drawy15 ]]; then
+		draw15=0
+	fi
+	if [[ $X == $drawx16 ]] && [[ $Y == $drawy16 ]]; then
+		draw16=0
+	fi
+	if [[ $X == $drawx17 ]] && [[ $Y == $drawy17 ]]; then
+		draw17=0
+	fi
+	if [[ $X == $drawx18 ]] && [[ $Y == $drawy18 ]]; then
+		draw18=0
+	fi
+	if [[ $X == $drawx19 ]] && [[ $Y == $drawy19 ]]; then
+		draw19=0
+	fi
+	if [[ $X == $drawx20 ]] && [[ $Y == $drawy20 ]]; then
+		draw20=0
+	fi
+	if [[ $X == $drawx21 ]] && [[ $Y == $drawy21 ]]; then
+		draw21=0
+	fi
+	if [[ $X == $drawx22 ]] && [[ $Y == $drawy22 ]]; then
+		draw22=0
+	fi
+	if [[ $X == $drawx23 ]] && [[ $Y == $drawy23 ]]; then
+		draw23=0
+	fi
+	if [[ $X == $drawx24 ]] && [[ $Y == $drawy24 ]]; then
+		draw24=0
+	fi
+	if [[ $X == $drawx25 ]] && [[ $Y == $drawy25 ]]; then
+		draw25=0
+	fi
+	if [[ $X == $drawx26 ]] && [[ $Y == $drawy26 ]]; then
+		draw26=0
+	fi
+	if [[ $X == $drawx27 ]] && [[ $Y == $drawy27 ]]; then
+		draw27=0
+	fi
+	if [[ $X == $drawx28 ]] && [[ $Y == $drawy28 ]]; then
+		draw28=0
+	fi
+	if [[ $X == $drawx29 ]] && [[ $Y == $drawy29 ]]; then
+		draw29=0
+	fi
+	if [[ $X == $drawx30 ]] && [[ $Y == $drawy30 ]]; then
+		draw30=0
+	fi
+	if [[ $X == $drawx31 ]] && [[ $Y == $drawy31 ]]; then
+		draw31=0
+	fi
+	if [[ $X == $drawx32 ]] && [[ $Y == $drawy32 ]]; then
+		draw32=0
+	fi
+	if [[ $X == $drawx33 ]] && [[ $Y == $drawy33 ]]; then
+		draw33=0
+	fi
+	if [[ $X == $drawx34 ]] && [[ $Y == $drawy34 ]]; then
+		draw34=0
+	fi
+	if [[ $X == $drawx35 ]] && [[ $Y == $drawy35 ]]; then
+		draw35=0
+	fi
+	if [[ $X == $drawx36 ]] && [[ $Y == $drawy36 ]]; then
+		draw36=0
+	fi
+	if [[ $X == $drawx37 ]] && [[ $Y == $drawy37 ]]; then
+		draw37=0
+	fi
+	if [[ $X == $drawx38 ]] && [[ $Y == $drawy38 ]]; then
+		draw38=0
+	fi
+	if [[ $X == $drawx39 ]] && [[ $Y == $drawy39 ]]; then
+		draw39=0
+	fi
+	if [[ $X == $drawx40 ]] && [[ $Y == $drawy40 ]]; then
+		draw40=0
+	fi
+	if [[ $X == $drawx41 ]] && [[ $Y == $drawy41 ]]; then
+		draw41=0
+	fi
+	if [[ $X == $drawx42 ]] && [[ $Y == $drawy42 ]]; then
+		draw42=0
+	fi
+	if [[ $X == $drawx43 ]] && [[ $Y == $drawy43 ]]; then
+		draw43=0
+	fi
+	if [[ $X == $drawx44 ]] && [[ $Y == $drawy44 ]]; then
+		draw44=0
+	fi
+	if [[ $X == $drawx45 ]] && [[ $Y == $drawy45 ]]; then
+		draw45=0
+	fi
+	if [[ $X == $drawx46 ]] && [[ $Y == $drawy46 ]]; then
+		draw46=0
+	fi
+	if [[ $X == $drawx47 ]] && [[ $Y == $drawy47 ]]; then
+		draw47=0
+	fi
+	if [[ $X == $drawx48 ]] && [[ $Y == $drawy48 ]]; then
+		draw48=0
+	fi
+	if [[ $X == $drawx49 ]] && [[ $Y == $drawy49 ]]; then
+		draw49=0
+	fi
+	if [[ $X == $drawx50 ]] && [[ $Y == $drawy50 ]]; then
+		draw50=0
+	fi
+	if [[ $X == $drawx51 ]] && [[ $Y == $drawy51 ]]; then
+		draw51=0
+	fi
+	if [[ $X == $drawx52 ]] && [[ $Y == $drawy52 ]]; then
+		draw52=0
+	fi
+	if [[ $X == $drawx53 ]] && [[ $Y == $drawy53 ]]; then
+		draw53=0
+	fi
+	if [[ $X == $drawx54 ]] && [[ $Y == $drawy54 ]]; then
+		draw54=0
+	fi
+	if [[ $X == $drawx55 ]] && [[ $Y == $drawy55 ]]; then
+		draw55=0
+	fi
+	if [[ $X == $drawx56 ]] && [[ $Y == $drawy56 ]]; then
+		draw56=0
+	fi
+	if [[ $X == $drawx57 ]] && [[ $Y == $drawy57 ]]; then
+		draw57=0
+	fi
+	if [[ $X == $drawx58 ]] && [[ $Y == $drawy58 ]]; then
+		draw58=0
+	fi
+	if [[ $X == $drawx59 ]] && [[ $Y == $drawy59 ]]; then
+		draw59=0
+	fi
+	if [[ $X == $drawx60 ]] && [[ $Y == $drawy60 ]]; then
+		draw60=0
+	fi
+	if [[ $X == $drawx61 ]] && [[ $Y == $drawy61 ]]; then
+		draw61=0
+	fi
+	if [[ $X == $drawx62 ]] && [[ $Y == $drawy62 ]]; then
+		draw62=0
+	fi
+	if [[ $X == $drawx63 ]] && [[ $Y == $drawy63 ]]; then
+		draw63=0
+	fi
+	if [[ $X == $drawx64 ]] && [[ $Y == $drawy64 ]]; then
+		draw64=0
+	fi
+	if [[ $X == $drawx65 ]] && [[ $Y == $drawy65 ]]; then
+		draw65=0
+	fi
+	if [[ $X == $drawx66 ]] && [[ $Y == $drawy66 ]]; then
+		draw66=0
+	fi
+	if [[ $X == $drawx67 ]] && [[ $Y == $drawy67 ]]; then
+		draw67=0
+	fi
+	if [[ $X == $drawx68 ]] && [[ $Y == $drawy68 ]]; then
+		draw68=0
+	fi
+	if [[ $X == $drawx69 ]] && [[ $Y == $drawy69 ]]; then
+		draw69=0
+	fi
+	if [[ $X == $drawx70 ]] && [[ $Y == $drawy70 ]]; then
+		draw70=0
+	fi
+	if [[ $X == $drawx71 ]] && [[ $Y == $drawy71 ]]; then
+		draw71=0
+	fi
+	if [[ $X == $drawx72 ]] && [[ $Y == $drawy72 ]]; then
+		draw72=0
+	fi
+	if [[ $X == $drawx73 ]] && [[ $Y == $drawy73 ]]; then
+		draw73=0
+	fi
+	if [[ $X == $drawx74 ]] && [[ $Y == $drawy74 ]]; then
+		draw74=0
+	fi
+	if [[ $X == $drawx75 ]] && [[ $Y == $drawy75 ]]; then
+		draw75=0
+	fi
+	if [[ $X == $drawx76 ]] && [[ $Y == $drawy76 ]]; then
+		draw76=0
+	fi
+	if [[ $X == $drawx77 ]] && [[ $Y == $drawy77 ]]; then
+		draw77=0
+	fi
+	if [[ $X == $drawx78 ]] && [[ $Y == $drawy78 ]]; then
+		draw78=0
+	fi
+	if [[ $X == $drawx79 ]] && [[ $Y == $drawy79 ]]; then
+		draw79=0
+	fi
+	if [[ $X == $drawx80 ]] && [[ $Y == $drawy80 ]]; then
+		draw80=0
+	fi
+	if [[ $X == $drawx81 ]] && [[ $Y == $drawy81 ]]; then
+		draw81=0
+	fi
+	if [[ $X == $drawx82 ]] && [[ $Y == $drawy82 ]]; then
+		draw82=0
+	fi
+	if [[ $X == $drawx83 ]] && [[ $Y == $drawy83 ]]; then
+		draw83=0
+	fi
+	if [[ $X == $drawx84 ]] && [[ $Y == $drawy84 ]]; then
+		draw84=0
+	fi
+	if [[ $X == $drawx85 ]] && [[ $Y == $drawy85 ]]; then
+		draw85=0
+	fi
+	if [[ $X == $drawx86 ]] && [[ $Y == $drawy86 ]]; then
+		draw86=0
+	fi
+	if [[ $X == $drawx87 ]] && [[ $Y == $drawy87 ]]; then
+		draw87=0
+	fi
+	if [[ $X == $drawx88 ]] && [[ $Y == $drawy88 ]]; then
+		draw88=0
+	fi
+	if [[ $X == $drawx89 ]] && [[ $Y == $drawy89 ]]; then
+		draw89=0
+	fi
+	if [[ $X == $drawx90 ]] && [[ $Y == $drawy90 ]]; then
+		draw90=0
+	fi
+	if [[ $X == $drawx91 ]] && [[ $Y == $drawy91 ]]; then
+		draw91=0
+	fi
+	if [[ $X == $drawx92 ]] && [[ $Y == $drawy92 ]]; then
+		draw92=0
+	fi
+	if [[ $X == $drawx93 ]] && [[ $Y == $drawy93 ]]; then
+		draw93=0
+	fi
+	if [[ $X == $drawx94 ]] && [[ $Y == $drawy94 ]]; then
+		draw94=0
+	fi
+	if [[ $X == $drawx95 ]] && [[ $Y == $drawy95 ]]; then
+		draw95=0
+	fi
+	if [[ $X == $drawx96 ]] && [[ $Y == $drawy96 ]]; then
+		draw96=0
+	fi
+	if [[ $X == $drawx97 ]] && [[ $Y == $drawy97 ]]; then
+		draw97=0
+	fi
+	if [[ $X == $drawx98 ]] && [[ $Y == $drawy98 ]]; then
+		draw98=0
+	fi
+	if [[ $X == $drawx99 ]] && [[ $Y == $drawy99 ]]; then
+		draw99=0
+	fi
+	if [[ $X == $drawx100 ]] && [[ $Y == $drawy100 ]]; then
+		draw100=0
+	fi
+
 }
 
 #Use this function if you want to stay with what the screen drew
